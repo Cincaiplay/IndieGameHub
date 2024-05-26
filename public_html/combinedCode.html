@@ -1,0 +1,2165 @@
+HTML files
+Navbar.html
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Indie Game Hub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav me-auto">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link" href="BrowseGame.html">Browse Games</a>
+                <a class="nav-link" href="AboutUs.html">About Us</a>
+                <a class="nav-link" href="ContactUs.html">Contact Us</a>
+            </div>
+            <form class="d-flex" id="searchForm" name="searchForm">
+                <input class="form-control me-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <div class="dropdown" id="userControl">
+                <!-- Content replaced dynamically based on login state -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+Home.html
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="Author" content="Chee Yu Koh">
+        <meta name="Description" content="This is task 7.4d">
+        <meta charset="utf-8">
+        <title>Indie Game Hub</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    </head>
+
+    <body>
+        <header>
+            <!-- Navigation bar -->
+            <div id="navbar-placeholder"></div>
+            
+        </header>
+
+        <main>
+            <!-- Carousel Ads -->
+            <div>
+                <div class="carousel slide" id="AdsCarousel" data-bs-ride="carousel" data-bs-interval="5000" style="background-color: gray;">
+                    <div class="carousel-indicators">
+                        <!-- Indicators will be inserted here dynamically -->
+                    </div>
+                
+                    <div class="carousel-inner container">
+                        <!-- Carousel items will be inserted here dynamically -->
+                    </div>
+                
+                    <button class="carousel-control-prev" type="button" data-bs-target="#AdsCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#AdsCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            
+
+            <!-- Main content area -->
+            <div class="container-fluid mt-4">
+                <div class="row">
+                    <div class="container-fluid mb-3">
+                        <div class="row ">
+                            <div class="col-2 col-s-12 px-0 bg-dark d-none d-sm-inline">
+                                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                                    <h3>Category</h3>
+                                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                                        <li>
+                                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                                <h4><i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Top Selling</span> </a></h4>
+                                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                                <li class="w-100">
+                                                    <a href="./Details.html?gameId=1" class="nav-link px-0"> <span class="d-none d-sm-inline">Terraria</span> </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./Details.html?gameId=2" class="nav-link px-0"> <span class="d-none d-sm-inline">Stardew Valley</span> </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./Details.html?gameId=3" class="nav-link px-0"> <span class="d-none d-sm-inline">Risk Of Rain 2</span> </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./Details.html?gameId=4" class="nav-link px-0"> <span class="d-none d-sm-inline">Project Zomboid</span> </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                                <h4><i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">New Release</span></a></h4>
+                                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                                <li class="w-100">
+                                                    <a href="./Details.html?gameId=5" class="nav-link px-0"> <span class="d-none d-sm-inline">Two Point Campus</span> </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./Details.html?gameId=6" class="nav-link px-0"> <span class="d-none d-sm-inline">UnderMine</span> </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./Details.html?gameId=7" class="nav-link px-0"> <span class="d-none d-sm-inline">Seablip</span> </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./Details.html?gameId=8" class="nav-link px-0"> <span class="d-none d-sm-inline">Slay The Spire</span> </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                                <h4><i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Upcoming</span>
+                                            </a></h4>
+                                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                                <li class="w-100">
+                                                    <a href="./Details.html?gameId=2" class="nav-link px-0"> <span class="d-none d-sm-inline">Stardew Valley</span> </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./Details.html?gameId=4" class="nav-link px-0"> <span class="d-none d-sm-inline">Project Zomboid</span> </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./Details.html?gameId=6" class="nav-link px-0"> <span class="d-none d-sm-inline">UnderMine</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="./Details.html?gameId=9" class="nav-link px-0"> <span class="d-none d-sm-inline">Slay The Spire</span> </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <hr>
+                                </div>
+                            </div>
+                            
+                            <div class="col-10 col-s-12">
+                                <!-- Featured Games Carousel -->
+                                <div class="container pt-3" style="background-color: gray;">
+                                    <h2>Featured Games</h2>
+                                    <div id="featuredGamesCarousel" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <!-- Indicators will be inserted here dynamically -->
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <!-- Carousel items will be inserted here dynamically -->
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#featuredGamesCarousel" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#featuredGamesCarousel" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- Browse Game -->
+                                <div class="container mt-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h2>Browse Game</h2>
+                                        <a href="./BrowseGame.html" class="btn btn-primary">More &gt;</a>
+                                    </div>
+                                    
+                                    <div class="row" id="BrowseAllGames">
+                                        <!-- Dynamic game items will be inserted here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </main>
+
+        <footer class="text-white bg-dark text-center  pt-3 pb-3">
+            <p>© 2024 Created by Chee Yu Koh </p>
+        </footer>
+        
+        <script src="./Js/navbar.js"></script>
+        <script src="./Js/Home.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>
+</html>
+
+BrowseGame.html
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="Author" content="Chee Yu Koh">
+        <meta name="Description" content="This is task 3.12P">
+        <meta charset="utf-8">
+        <title>Indie Game Hub</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    </head>
+
+    <body>
+        <header>
+            <!-- Navigation bar -->
+            <div id="navbar-placeholder"></div>
+
+        </header>
+
+        <main >
+            <div class="container mt-5 mb-5">
+                <h1 class="mb-4">Browse Games</h1>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="game-list border">
+
+                            <div class="game-entry m-3 p-2 border">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="https://via.placeholder.com/150x100" alt="Game Thumbnail" class="img-fluid">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>Game Name 1</h5>
+                                        <p>Game Description: Short details about the game.</p>
+                                    </div>
+                                    <div class="col-md-3 text-end">
+                                        <p class="game-price">$1000.00</p>
+                                        <a href="./Details.html" class="btn btn-primary">View</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 border">
+                        
+                        <div class="mt-3 mb-3"><h4>Search</h4></div>
+                        <form id="sortingForm" name="sortingForm">
+                            <div class="mb-3">
+                                <label for="sortName" class="form-label">Name</label>
+                                <input id="searchName" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="sortName" class="form-label">Sort by Name</label>
+                                <select id="sortName" class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option value="aToZ">A to Z</option>
+                                    <option value="zToA">Z to A</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="priceRange" class="form-label">Price Range: <span id="priceRangeLabel">> $2000</span></label>
+                                <input type="range" class="form-range" min="0" max="2000" id="priceRange" value="2000" oninput="updatePriceRangeLabel(this.value);">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sort</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+
+        <footer class="text-white bg-dark text-center  pt-3 pb-3">
+            <p>© 2024 Created by Chee Yu Koh </p>
+        </footer>
+        <script src="./Js/navbar.js"></script>
+        <script src="./Js/browseGame.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            
+        </script>
+
+    </body>
+
+</html>
+
+Details.html
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="Author" content="Chee Yu Koh">
+        <meta name="Description" content="This is task 3.12P">
+        <meta charset="utf-8">
+        <title>Indie Game Hub</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    </head>
+
+    <body>
+        <header>
+            <!-- Navigation bar -->
+            <div id="navbar-placeholder"></div>
+
+        </header>
+
+        <main>
+            <div class="container mt-5 mb-5">
+                <h1 class="mb-3">Game Name</h1>
+                <!-- Carousel for game images -->
+                <div id="gameImagesCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#gameImagesCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#gameImagesCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+        
+                <div class="row mt-4">
+                    <div class="col-md-8 mt-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Description</h4>
+                            </div>
+                            <div class="card-body mb-3">
+                                <p>Game Description: Placeholder text about the game, its background, story, and interesting details that players might enjoy.</p>
+                                <p>About This Game: More detailed information about what makes this game special and the experiences it offers.</p>
+
+                                
+                            </div>
+                            
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-12 d-flex justify-content-end mt-2">
+                                        <p class="game-price h3">$1000.00</p>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-end mt-2">
+                                        <a href="./Checkout.html" class="btn btn-primary" id="checkoutButton" name="checkoutButton">Check out</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mt-3">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between">
+                                <h4>Review</h4>
+                                <button class="btn btn-primary" id="addReviewButton" name="addReviewButton">Add Review</button>
+                            </div>
+                            <div class="card-body" id="reviewCard" name="reviewCard">
+                                <!-- Reviews will be dynamically inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+        
+        <!-- Add Review Modal -->
+        <div class="modal fade" id="addReviewModal" tabindex="-1" aria-labelledby="addReviewModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addReviewModalLabel">Add Game Review</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="reviewForm">
+                            <div class="mb-3">
+                                <label for="reviewRating" class="form-label">Rating</label>
+                                <select class="form-select" id="reviewRating" required>
+                                    <option value="">Choose a rating...</option>
+                                    <option value="1">1 - Poor</option>
+                                    <option value="2">2 - Fair</option>
+                                    <option value="3">3 - Good</option>
+                                    <option value="4">4 - Very Good</option>
+                                    <option value="5">5 - Excellent</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="reviewText" class="form-label">Review</label>
+                                <textarea class="form-control" id="reviewText" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Review</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-white bg-dark text-center  pt-3 pb-3">
+            <p>© 2024 Created by Chee Yu Koh </p>
+        </footer>
+        <script src="./Js/detail.js"></script>
+        <script src="./Js/navbar.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>
+
+AboutUs.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="Author" content="Chee Yu Koh">
+    <meta name="Description" content="Learn more about Indie Game Hub, our mission, community, and what drives us to deliver the best indie gaming experience.">
+    <meta charset="utf-8">
+    <title>About Us - Indie Game Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <div id="navbar-placeholder"></div>
+    </header>
+
+    <main class="container-fluid mt-3 mb-3" style="background-color: bisque; ">
+        <div class="container mt-3 mb-3" >
+            <div class="row pt-4 pb-4">
+                <div class="col-md-8">
+                    <h1>About Us</h1>
+                    <p>Welcome to Indie Game Hub, where we bring together innovative indie games and a vibrant community of gamers and developers. Founded in 2024, our platform is dedicated to showcasing diverse, creative, and engaging indie games.</p>
+                    <p>We support indie developers by providing them with the tools and exposure needed to succeed. Our community features allow gamers to interact, share feedback, and participate in the growth of these games.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="./images/image1.jpg" alt="Indie Game Hub Community" class="img-fluid">
+                </div>
+            </div>
+            
+            <div class="row pt-4 pb-4" style="background-color: rgb(253, 208, 152);">
+                <div class="col-md-4">
+                    <img src="./images/image2.jfif" alt="Our Mission at Indie Game Hub" class="img-fluid">
+                </div>
+                <div class="col-md-8">
+                    <h2>Our Mission</h2>
+                    <p>Our mission is to empower indie developers and provide gamers with an unforgettable gaming experience. By fostering a nurturing environment, we help bring creative visions to life.</p>
+                    <p>We are committed to innovation and community, aiming to set new standards in the indie gaming industry.</p>
+                </div>
+            </div>
+    
+            <div class="row pt-4 pb-4">
+                <div class="col-md-8">
+                    <h2>Join Our Community</h2>
+                    <p>At Indie Game Hub, community is everything. Join us to connect with other gamers, participate in events, and help shape the future of indie gaming.</p>
+                    <p>Explore new games, meet the creators, and share your insights. Together, we can create something extraordinary.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="./images/image3.jpg" alt="Join Our Community" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        
+    </main>
+
+    <footer class="text-white bg-dark text-center pt-3 pb-3">
+        <p>© 2024 Created by Chee Yu Koh</p>
+    </footer>
+    <script src="./Js/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+ContactUs.html
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="Author" content="Chee Yu Koh">
+        <meta name="Description" content="This is task 3.12P">
+        <meta charset="utf-8">
+        <title>Indie Game Hub</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxFkgiYXdeYIpJdcTVLRcQoHeCFDMz2xM&callback=console.debug&libraries=maps,marker&v=beta">
+        </script>   <!-- the api key is locked to my IP address, therefore the map might not be able to use when it is used outside of my IP -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <header>
+            <!-- Navigation bar -->
+            <div id="navbar-placeholder"></div>
+
+        </header>
+
+        <!-- Main Content Here -->
+
+        <main class="container my-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Contact Us</h1>
+                    <div class="contact-details">
+                        <p><strong>Email:</strong> contact@indiegamehub.com </p>
+                        <p><strong>Phone:</strong> +61 401058915</p>
+                        <p><strong>Address:</strong> Building LC, 70 Elgar Road, Burwood Victoria 3125</p>
+                    </div>
+                </div>
+                <div id="col-md-6 map-container" style="height: 500px; width: 600px;">
+                    <gmp-map center="-37.8448600769043,145.1116485595703" zoom="14" map-id="DEMO_MAP_ID">
+                        <gmp-advanced-marker position="-37.8448600769043,145.1116485595703" title="My location"></gmp-advanced-marker>
+                      </gmp-map>
+                </div>
+            </div>
+        </main>
+
+        <!-- Main Content Ends Here -->
+
+        <footer class="text-white bg-dark text-center  pt-3 pb-3">
+            <p>© 2024 Created by Chee Yu Koh </p>
+        </footer>
+        <script src="./Js/navbar.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>
+
+Register.html	
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="Author" content="Chee Yu Koh">
+        <meta name="Description" content="This is task 3.12P">
+        <meta charset="utf-8">
+        <title>Indie Game Hub</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./Js/registrationValidation.js"></script>
+
+    </head>
+
+    <body>
+        <header>
+            <!-- Navigation bar -->
+            <div id="navbar-placeholder"></div>
+
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <div class="container mt-5 mb-5">
+                <div class="row">
+                    <div>
+                        <h1>Register</h1>
+                    </div>
+                    <div class="mt-3 col-md-8 offset-md-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <form id="registrationForm">
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">Username</label>
+                                        <input type="text" class="form-control" id="username" placeholder="Enter username">
+                                        <div id="usernameError" class="text-danger"></div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="text" class="form-control" id="email" placeholder="Enter email">
+                                        <div id="emailError" class="text-danger"></div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password" placeholder="Enter password">
+                                        <div id="passwordError" class="text-danger"></div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="confirm-password" class="form-label">Re-enter Password</label>
+                                        <input type="password" class="form-control" id="confirm-password" placeholder="Re-enter password">
+                                        <div id="confirmPasswordError" class="text-danger"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-primary">Register</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- End of Main content-->        
+
+        <footer class="text-white bg-dark text-center  pt-3 pb-3">
+            <p>© 2024 Created by Chee Yu Koh </p>
+        </footer>
+        <script src="./Js/navbar.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>
+
+Login.html
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="Author" content="Chee Yu Koh">
+        <meta name="Description" content="This is task 3.12P">
+        <meta charset="utf-8">
+        <title>Indie Game Hub</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <script src="./Js/loginValidation.js"></script>
+        
+    </head>
+
+    <body>
+        <header>
+            <!-- Navigation bar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">Indie Game Hub</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav me-auto">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            <a class="nav-link" href="BrowseGame.html">Browse Games</a>
+                            <a class="nav-link" href="AboutUs.html">About Us</a>
+                            <a class="nav-link" href="ContactUs.html">Contact Us</a>
+                        </div>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        <a class="nav-link" href="./Login.html">Login</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container mt-5 mb-5">
+                <div class="row">
+                    <div class="mb-3">
+                        <h1>Login</h1>
+                    </div>
+
+                    <div class="col-md-6 justify-content-center">
+                        <div class="card p-3">
+                            <div class="card-body">
+                                <form id="loginForm" name="loginForm">
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">Username:</label>
+                                        <input type="text" class="form-control" id="username" name="username">
+                                        <div id="usernameError" class="text-danger"></div>
+                                    </div>
+                                    <div>
+                                        <label for="password" class="form-label">Password:</label>
+                                        <input type="password" class="form-control" id="password" name="password">
+                                        <div id="passwordError" class="text-danger"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-end mb-3">
+                                        <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Forgot Password?</a>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary mt-2 col-12">Login</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center mt-5 pt-5">
+                            <h5>No Account yet?</h5>
+                            <p>Sign up Now!</p>
+                            <a href="./Register.html" class="btn btn-primary">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+
+
+        </main>
+
+        <!-- Reset password Modal -->
+        <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+            <div class="modal-dialog ">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">Forgot Password</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        <form id="resetPasswordForm">
+                            <div class="mb-3">
+                                <label for="emailInput" class="form-label">Enter your email:</label>
+                                <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="sendResetLink()">Send Reset Link</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-white bg-dark text-center  pt-3 pb-3">
+            <p>© 2024 Created by Chee Yu Koh </p>
+        </footer>
+
+        <script src="./Js/ForgotPassword.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>
+
+Settings.html
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="Author" content="Chee Yu Koh">
+        <meta name="Description" content="This is task 3.12P">
+        <meta charset="utf-8">
+        <title>Indie Game Hub</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./Js/editProfile.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <!-- Navigation bar -->
+            <div id="navbar-placeholder"></div>
+
+        </header>
+
+        <main class="container mt-5 mb-5">
+            <div class="row">
+                <div class="mb-3">
+                    <h1>Settings</h1>
+                </div>
+                <div class="col-md-3 settings-sidebar">
+                    <div class="list-group">
+                        <a href="#myGames" class="list-group-item list-group-item-action active" aria-controls="myGames">My Games</a>
+                        <a href="#paymentHistory" class="list-group-item list-group-item-action" aria-controls="paymentHistory">Payment History</a>
+                        <a href="#gamesStatus" class="list-group-item list-group-item-action" aria-controls="gamesStatus">Games Status</a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div id="myGames" class="tab-content">
+                        <h4>My Games</h4>
+                        <div class="row mb-3" id="gamesContainer">
+                            <!-- Dynamic game cards will be inserted here -->
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadGameModal">
+                                Upload Game
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="paymentHistory" class="tab-content" style="display:none;">
+                        <h4>Payment History</h4>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Game</th>
+                                    <th scope="col">Payment Method</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Example Row (Dynamic content should replace this) -->
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>2024-05-24</td>
+                                    <td>$19.99</td>
+                                    <td>Game Name Here</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <!-- Additional rows will be added dynamically from the database -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="gamesStatus" class="tab-content" style="display:none;">
+                        <h4>Games Status</h4>
+                        <p>Information on the status of your games, including updates and notifications, will be shown here.</p>
+                        <div class="d-flex justify-content-center">
+                            <h1>Under Constructions...</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Modal HTML -->
+        <div class="modal fade" id="uploadGameModal" tabindex="-1" aria-labelledby="uploadGameModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="uploadGameModalLabel">Upload New Game</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="uploadGameForm">
+                            <div class="mb-3">
+                                <label for="gameName" class="form-label">Game Name:</label>
+                                <input type="text" class="form-control" id="gameName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="gamePrice" class="form-label">Game Price:</label>
+                                <input type="number" class="form-control" id="gamePrice" step="0.01" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="gameDescription" class="form-label">Game Description:</label>
+                                <textarea class="form-control" id="gameDescription" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="gameFile" class="form-label">Upload File:</label>
+                                <input type="file" class="form-control" id="gameFile" required>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="submitGame()">Upload Game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        <footer class="text-white bg-dark text-center  pt-3 pb-3">
+            <p>© 2024 Created by Chee Yu Koh </p>
+        </footer>
+
+        <script src="./Js/settings.js"> </script>
+        <script src="./Js/navbar.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>
+
+Checkout.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="Author" content="Chee Yu Koh">
+    <meta name="Description" content="This is task 3.12P">
+    <meta charset="utf-8">
+    <title>Indie Game Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <div id="navbar-placeholder"></div>
+    </header>
+
+    <main>
+        <div class="container mt-5 mb-5">
+            <h1 class="mb-4">Checkout</h1>
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <h4>Card Details</h4>
+                    <form class="mt-3">
+                        <div class="mb-3 col-md-8">
+                            <label for="nameOnCard" class="form-label">Name On Card</label>
+                            <input type="text" class="form-control" id="nameOnCard" placeholder="Name on Card">
+                            <div id="nameOnCardError" class="text-danger"></div>
+                        </div>
+                        <div class="mb-3 col-md-8">
+                            <label for="cardNumber" class="form-label">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="Card Number">
+                            <div id="cardNumberError" class="text-danger"></div>
+                        </div>
+                        <div class="mb-3 d-flex justify-content-between col-md-8">
+                            <div class="me-1">
+                                <label for="expiryDate" class="form-label">Expiry Date</label>
+                                <input type="text" class="form-control" id="expiryDate" placeholder="MM / YY">
+                                <div id="expiryDateError" class="text-danger"></div>
+                            </div>
+                            <div class="ms-1">
+                                <label for="cvc" class="form-label">CVC</label>
+                                <input type="text" class="form-control" id="cvc" placeholder="CVC">
+                                <div id="cvcError" class="text-danger"></div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Checkout</button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex justify-content-end">
+                        <h4>Order Summary</h4>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p>GameName 1:</p>
+                                <p>$ 1000.00</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p>Tax:</p>
+                                <p>$ 50.00</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p>Charge:</p>
+                                <p>$ 50.00</p>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-end">
+                                <p><strong>Subtotal: $ 1100.00</strong></p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-white bg-dark text-center pt-3 pb-3">
+        <p>© 2024 Created by Chee Yu Koh </p>
+    </footer>
+    <script src="./Js/navbar.js"></script>
+    <script src="./Js/checkoutValidation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+Profile.html
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="Author" content="Chee Yu Koh">
+        <meta name="Description" content="This is task 3.12P">
+        <meta charset="utf-8">
+        <title>Indie Game Hub</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./Js/editProfile.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <!-- Navigation bar -->
+            <div id="navbar-placeholder"></div>
+
+        </header>
+
+        <main>
+            <div class="container mt-5 mb-5">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center mb-4">
+                            <img src="https://via.placeholder.com/200" class="rounded-circle" alt="Profile Image" id="profileImage" style="cursor: pointer;">
+                            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                            <div class="mt-5">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>Bios</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <p id="bioText">Text about the user goes here. This could include the user's bio, interests, or any other relevant information.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4>Profile</h4>
+                                    <button class="btn btn-primary" id="editProfileButton" onclick="toggleEditMode()">Edit</button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5>Personal Details</h5>
+                                <p><strong>Username:</strong> <span id="usernameDisplay">abcdefg</span></p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p><strong>Password:</strong> <span id="passwordDisplay" data-password="actualPassword">********</span></p>
+                                    <button class="btn btn-secondary" onclick="togglePasswordVisibility()">Show</button>
+                                </div>
+                                <p><strong>First Name:</strong> <span id="firstNameDisplay">aaaaaaaaa</span></p>
+                                <p><strong>Last Name:</strong> <span id="lastNameDisplay">aaaaaaaaa</span></p>
+                        
+                                <hr> <!-- Divider line between sections -->
+                                
+                                <h5 class="mt-4">Billing Details</h5>
+                                <p><strong>Billing Address:</strong> <span id="billingAddressDisplay">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span></p>
+                                <p><strong>City:</strong> <span id="cityDisplay">aaaaaaaaa</span></p>
+                                <p><strong>Postal Code:</strong> <span id="postalCodeDisplay">1234</span></p>
+                                <p><strong>State:</strong> <span id="stateDisplay">VIC</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="text-white bg-dark text-center  pt-3 pb-3">
+            <p>© 2024 Created by Chee Yu Koh </p>
+        </footer>
+        <script src="./Js/navbar.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>
+
+JS Files
+browseGame.js
+// Wait until the DOM is fully loaded before running the script
+document.addEventListener('DOMContentLoaded', function() {
+    // Extract search term from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchTerm = urlParams.get('search') || '';
+
+    // Fetch all games with default values or based on search term
+    fetchGames(searchTerm, '', 2000); // Default values to fetch all games
+
+    // Get the sorting form element
+    const form = document.getElementById('sortingForm'); 
+
+    // Add an event listener to the form for the 'submit' event
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        // Get the values from the form inputs
+        const searchInput = document.getElementById('searchName').value;
+        const sortOption = document.getElementById('sortName').value;
+        const priceRange = document.getElementById('priceRange').value;
+
+        // Fetch games based on the input values
+        fetchGames(searchInput, sortOption, priceRange);
+    });
+});
+
+// Function to fetch games based on search term, sort option, and price range
+function fetchGames(searchTerm, sortOption, priceRange) {
+    // Construct the URL with query parameters
+    let url = `/games/getAllGames?search=${encodeURIComponent(searchTerm)}&sort=${sortOption}`;
+    if(priceRange < 2000) {
+        url += `&price=${priceRange}`;
+    }
+
+    // Fetch data from the server
+    fetch(url)
+    .then(response => response.json()) // Parse the JSON response
+    .then(displayGames) // Display the games
+    .catch(console.error); // Log any errors to the console
+}
+
+// Function to display the games on the web page
+function displayGames(games) {
+    const gamesContainer = document.querySelector('.game-list'); // Get the container element for the games
+    gamesContainer.innerHTML = ''; // Clear any existing content
+
+    // Iterate over each game and create HTML for it
+    games.forEach(game => {
+        gamesContainer.innerHTML += `
+        <div class="game-entry m-3 p-2 border">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="/images/Games/${game.ImagePath}" alt="${game.Title}" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h5>${game.Title}</h5>
+                    <p>Game Description: ${game.Description}</p>
+                </div>
+                <div class="col-md-3 text-end">
+                    <p class="game-price">$${game.Price.toFixed(2)}</p>
+                    <a href="./Details.html?gameId=${game.Game_ID}" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>`;
+    });
+}
+
+// Function to update the price range label
+function updatePriceRangeLabel(value) {
+    let label = '$0 - $' + value; // Create the label text
+    if (value == 2000) { // Special case for maximum value
+        label = '> $2000';
+    }
+    document.getElementById('priceRangeLabel').textContent = label; // Update the label on the web page
+}
+
+
+
+checkoutValidation.js
+// Wait until the DOM is fully loaded before running the script
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector('form');
+    UpdateSummary(); // Update the order summary on page load
+    
+    // Add an event listener to the form for the 'submit' event
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        
+        // Validate form inputs
+        let formIsValid = Validation();
+        console.log(formIsValid);
+        if (formIsValid) {
+            saveTransaction(); // Save the transaction if form is valid
+        }
+    });
+});
+
+// Function to validate the card number
+function validateCardNumber(number) {
+    return number.length === 16; // Simple length check
+}
+
+// Function to validate the expiry date
+function validateExpiryDate(date) {
+    return /^\d{2}\/\d{2}$/.test(date); // Check for MM/YY format
+}
+
+// Function to validate the CVC code
+function validateCVC(cvc) {
+    return /^[0-9]{3,4}$/.test(cvc); // Check for 3 or 4 digit numeric value
+}
+
+// Function to save the transaction
+async function saveTransaction() {
+    var storedUsername = sessionStorage.getItem('username');
+    let userID;
+
+    // Check if the user is logged in
+    if (!storedUsername) {
+        console.error('User is not logged in');
+        return null; // Return if no username is provided
+    } else {
+        try {
+            // Fetch user ID from the server
+            const response = await fetch(`/users/getUserID?username=${encodeURIComponent(storedUsername)}`);
+            if (!response.ok) {
+                throw new Error('Failed to fetch user ID');
+            }
+            data = await response.json();
+            userID = data.User_ID;
+        } catch (error) {
+            console.error('Error:', error);
+            return null; // Return null on error
+        }
+    }
+    
+    console.log(userID);
+    const GameID = getQueryParam('gameID'); // Get the game ID from the URL
+    let game = await fetchGameDetail(GameID); // Fetch game details
+
+    // Calculate subtotal
+    const subtotal = game.Price + (game.Price * 0.05) + (game.Price * 0.1);
+    const transactionData = {
+        userId: userID, 
+        gameId: GameID, 
+        amount: subtotal.toFixed(2), 
+        paymentMethod: 'Credit Card'
+    };
+    console.log("Subtotal: " + subtotal);
+
+    // Save transaction data to the server
+    fetch('/transactions/CreateTransaction', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(transactionData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok.');
+        }
+        return response.json();
+    })
+    .then(data => {
+        alert('Purchase Successfully! You can play the game now.');
+        window.location.href = './'; // Redirect after successful transaction
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to record transaction.');
+    });
+}
+
+// Function to validate the form inputs
+function Validation() {
+    const nameOnCard = document.getElementById('nameOnCard');
+    const cardNumber = document.getElementById('cardNumber');
+    const expiryDate = document.getElementById('expiryDate');
+    const cvc = document.getElementById('cvc');
+
+    // Error elements
+    const nameError = document.getElementById('nameOnCardError');
+    const numberError = document.getElementById('cardNumberError');
+    const expiryError = document.getElementById('expiryDateError');
+    const cvcError = document.getElementById('cvcError');
+
+    let formIsValid = true;
+
+    // Clear previous errors
+    nameError.textContent = '';
+    numberError.textContent = '';
+    expiryError.textContent = '';
+    cvcError.textContent = '';
+
+    // Validate Name on Card
+    if (!nameOnCard.value.trim()) {
+        nameError.textContent = 'Name on card is required.';
+        formIsValid = false;
+    }
+
+    // Validate Card Number
+    if (!cardNumber.value.trim()) {
+        numberError.textContent = 'Card number is required.';
+        formIsValid = false;
+    } else if (!validateCardNumber(cardNumber.value)) {
+        numberError.textContent = 'Invalid card number.';
+        formIsValid = false;
+    }
+
+    // Validate Expiry Date
+    if (!expiryDate.value.trim()) {
+        expiryError.textContent = 'Expiry date is required.';
+        formIsValid = false;
+    } else if (!validateExpiryDate(expiryDate.value)) {
+        expiryError.textContent = 'Invalid expiry date.';
+        formIsValid = false;
+    }
+
+    // Validate CVC
+    if (!cvc.value.trim()) {
+        cvcError.textContent = 'CVC is required.';
+        formIsValid = false;
+    } else if (!validateCVC(cvc.value)) {
+        cvcError.textContent = 'Invalid CVC.';
+        formIsValid = false;
+    }
+
+    return formIsValid; // Return the overall form validation status
+}
+
+// Function to update the order summary with game details
+async function UpdateSummary() {
+    const gameId = getQueryParam('gameID'); // Get the game ID from the URL
+    console.log('gameID: ' + gameId);
+
+    try {
+        let game = await fetchGameDetail(gameId); // Fetch game details
+        if (game) {
+            // Update the order summary with game details
+            document.querySelector('.card-body').innerHTML = `
+                <div class="d-flex justify-content-between align-items-center">
+                    <p>${game.Title}:</p>
+                    <p>$ ${game.Price.toFixed(2)}</p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p>Tax:</p>
+                    <p>$ ${(game.Price * 0.05).toFixed(2)}</p> <!-- 5% tax -->
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p>Charge:</p>
+                    <p>$ ${(game.Price * 0.1).toFixed(2)}</p> <!-- 10% charge -->
+                </div>
+                <hr>
+                <div class="d-flex justify-content-end">
+                    <p><strong>Subtotal: $ ${(game.Price * 1.15).toFixed(2)}</strong></p>
+                </div>`;
+        } else {
+            console.log('Game not found');
+        }
+    } catch (error) {
+        console.error('Failed to load game details:', error);
+    }
+}
+
+// Function to fetch game details by game ID
+async function fetchGameDetail(gameID) {
+    try {
+        const response = await fetch(`/games/getGameByID/${gameID}`);  
+        if (!response.ok) throw new Error('Network response was not ok');
+        return await response.json();
+    } catch (error) {
+        console.error('Failed to load game details:', error);
+        return null;  // Return null or appropriate value on error
+    }
+}
+
+// Function to extract query parameters from the URL
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+
+detail.js
+// Function to get the game ID from the URL query parameters
+function getGameId() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    return urlSearchParams.get('gameId');
+}
+
+// Function to update the page with game details
+function updatePageWithGameDetails(game) {
+    document.querySelector('h1').textContent = game.name; // Update main heading
+    document.querySelector('h1.mb-3').textContent = game.Title; // Update the main game title
+    document.querySelector('.carousel-inner').innerHTML = `
+        <div class="carousel-item active">
+            <img src="/images/Games/${game.ImagePath}" class="d-block w-100" alt="Game Image 1">
+        </div>`;
+    document.querySelector('.card-body p').textContent = game.Description; // Update game description
+    document.querySelectorAll('.game-price').forEach(el => el.textContent = `$${game.Price}`); // Update game price
+
+    let checkoutButton = document.getElementById('checkoutButton');
+    if (checkoutButton) {
+        console.log('Button found');
+        checkoutButton.setAttribute('href', './Checkout.html?gameID=' + game.Game_ID); // Update checkout button link
+    }
+}
+
+// Function to fetch game details from the server
+function fetchGameDetails(gameId) {
+    fetch(`/games/getGamebyID/${gameId}`) // Adjust the URL based on your API endpoint
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(game => {
+            updatePageWithGameDetails(game); // Update page with fetched game details
+        })
+        .catch(error => {
+            console.error('Error loading the game details:', error);
+        });
+}
+
+// Wait until the DOM is fully loaded before running the script
+document.addEventListener('DOMContentLoaded', function() {
+    const gameId = getGameId(); // Get the game ID from the URL
+    if (gameId) {
+        fetchGameDetails(gameId); // Fetch and display game details
+        fetchReviews(gameId); // Fetch and display game reviews
+    } else {
+        console.error('Game ID is missing from the URL');
+    }
+
+    const addReviewButton = document.getElementById('addReviewButton');
+    const reviewForm = document.getElementById('reviewForm');
+
+    if (addReviewButton) {
+        addReviewButton.addEventListener('click', function() {
+            $('#addReviewModal').modal('show'); // Use jQuery to show the modal
+        });
+    }
+
+    if (reviewForm) {
+        reviewForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const rating = document.getElementById('reviewRating').value;
+            const reviewText = document.getElementById('reviewText').value;
+
+            var storedUsername = sessionStorage.getItem('username');
+            if (storedUsername) {
+                fetch(`/users/getUserID?username=${encodeURIComponent(storedUsername)}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Failed to fetch user ID');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('User ID:', data.User_ID);
+                        submitReview(gameId, data.User_ID, rating, reviewText); // Submit review
+                        alert('Review submitted successfully!');
+                    })
+                    .catch(error => console.error('Error:', error));
+            } else {
+                alert('User is not logged in');
+            }
+
+            $('#addReviewModal').modal('hide'); // Hide the modal after submission
+            // Optionally refresh or update the page content here
+        });
+    }
+});
+
+// Function to submit a review to the server
+function submitReview(gameId, userId, rating, comment) {
+    fetch('/reviews/addReview', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ game_id: gameId, user_id: userId, rating: rating, comment: comment })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Review submitted:', data);
+        alert('Review added successfully!');
+    })
+    .catch(error => console.error('Error submitting review:', error));
+}
+
+// Function to fetch reviews for a game from the server
+function fetchReviews(gameId) {
+    fetch(`/reviews/getReviews?gameId=${gameId}`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to fetch reviews');
+        }
+        return response.json();
+    })
+    .then(reviews => {
+        const reviewsContainer = document.getElementById('reviewCard');
+        reviewsContainer.innerHTML = '';  // Clear existing content
+
+        // Iterate over each review and create HTML for it
+        reviews.forEach(review => {
+            reviewsContainer.innerHTML += `
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h4>${review.Username}</h4>
+                        Rating: ${getRatingStars(review.Rating)}
+                    </div>
+                    <div class="card-body">
+                        <p>${review.Comment}</p>
+                    </div>
+                </div>
+            `;
+        });
+    })
+    .catch(error => {
+        console.error('Error loading reviews:', error);
+    });
+}
+
+// Function to generate star ratings for reviews
+function getRatingStars(rating) {
+    let stars = '';
+    for (let i = 0; i < 5; i++) {
+        if (i < rating) {
+            stars += '★'; // Filled star
+        } else {
+            stars += '☆'; // Empty star
+        }
+    }
+    return stars;
+}
+
+
+editProfile.js
+let isEditMode = false; // Variable to track edit mode status
+let passwordVisible = false; // Variable to track password visibility status
+
+// Function to toggle between edit and view modes
+function toggleEditMode() {
+    const editables = ['username', 'password', 'firstName', 'lastName', 'billingAddress', 'city', 'postalCode', 'state'];
+    const bioParagraph = document.getElementById('bioText');
+    isEditMode = !isEditMode;
+    document.getElementById('editProfileButton').textContent = isEditMode ? 'Save' : 'Edit';
+
+    // Handle the bio separately
+    if (isEditMode) {
+        const textarea = document.createElement('textarea');
+        textarea.id = 'bioInput';
+        textarea.className = 'form-control';
+        textarea.value = bioParagraph.textContent.trim();
+        bioParagraph.parentNode.replaceChild(textarea, bioParagraph);
+    } else {
+        const bioText = document.createElement('p');
+        bioText.id = 'bioText';
+        const input = document.getElementById('bioInput');
+        bioText.textContent = input.value;
+        input.parentNode.replaceChild(bioText, input);
+    }
+
+    // Toggle other fields
+    editables.forEach(field => {
+        const displaySpan = document.getElementById(field + 'Display');
+        if (isEditMode) {
+            const input = document.createElement('input');
+            input.type = field === 'password' ? 'password' : 'text';
+            input.className = 'form-control';
+            input.id = field + 'Input';
+            input.value = displaySpan.textContent.trim();
+            displaySpan.parentNode.replaceChild(input, displaySpan);
+        } else {
+            const span = document.createElement('span');
+            span.id = field + 'Display';
+            const input = document.getElementById(field + 'Input');
+            span.textContent = input.value;
+            input.parentNode.replaceChild(span, input);
+        }
+    });
+
+    if (!isEditMode) {
+        console.log('Data saved!'); // Placeholder for saving data
+    }
+}
+
+// Function to revert an input field back to a span element
+function revertToSpan(field, isPassword = false) {
+    const displaySpan = document.createElement('span');
+    displaySpan.id = field + 'Display';
+    const input = document.getElementById(field + 'Input');
+    displaySpan.textContent = input.value;
+    if (isPassword) {
+        displaySpan.dataset.password = input.value; // Store the actual password
+        displaySpan.textContent = '********'; // Mask password when not in edit mode
+    }
+    input.parentNode.replaceChild(displaySpan, input);
+}
+
+// Function to toggle password visibility
+function togglePasswordVisibility() {
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordDisplay = document.getElementById('passwordDisplay');
+
+    if (isEditMode) {
+        // Toggle password input type between 'password' and 'text' in edit mode
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            passwordVisible = true;
+        } else {
+            passwordInput.type = 'password';
+            passwordVisible = false;
+        }
+    } else {
+        // Toggle password display text in view mode
+        if (passwordVisible) {
+            passwordDisplay.textContent = passwordDisplay.dataset.password;
+        } else {
+            passwordDisplay.textContent = '********';
+        }
+        passwordVisible = !passwordVisible;
+    }
+}
+
+
+ForgotPassword.js
+// Function to send a password reset link to the provided email address
+function sendResetLink() {
+    const emailInput = document.getElementById('emailInput');
+    const email = emailInput.value;
+    
+    if (!validateEmail(email)) {
+        // Show an error message if the email is invalid
+        emailInput.classList.add('is-invalid');
+        return;  // Stop the function if the email is invalid
+    } else {
+        emailInput.classList.remove('is-invalid');  // Remove error class if previously added
+    }
+
+    console.log('Sending password reset link to:', email);
+
+    // Simulate sending email
+    updateModalContent();
+}
+
+// Function to validate the email format
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase()); // Use regular expression to validate email format
+}
+
+// Function to update the modal content with a success message
+function updateModalContent() {
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+
+    // Update the modal content for success message
+    modalTitle.textContent = 'Reset Link Sent';
+    modalBody.innerHTML = `<p>A password reset link has been sent to your email address. Please check your inbox to continue.</p>
+                           <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>`;
+}
+
+Home.js
+// Fetch and display games for ads carousel on page load
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('/games/getGames?limit=3')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(games => {
+        console.log('Ads Games loaded');
+        if (games && games.length) {
+            const carouselIndicators = document.querySelector('#AdsCarousel .carousel-indicators');
+            const carouselInner = document.querySelector('#AdsCarousel .carousel-inner');
+
+            // Create carousel indicators and items for each game
+            games.forEach((game, index) => {
+                // Create carousel indicator for each game
+                const indicator = document.createElement('button');
+                indicator.setAttribute('type', 'button');
+                indicator.setAttribute('data-bs-target', '#AdsCarousel');
+                indicator.setAttribute('data-bs-slide-to', index);
+                indicator.className = index === 0 ? 'active' : '';
+                indicator.setAttribute('aria-current', index === 0 ? 'true' : 'false');
+                indicator.setAttribute('aria-label', `Slide ${index + 1}`);
+                carouselIndicators.appendChild(indicator);
+
+                // Create carousel item for each game
+                const item = document.createElement('div');
+                item.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+                item.innerHTML = `
+                    <a href="/Details.html?gameId=${game.Game_ID}">
+                        <img src="images/Games/${game.ImagePath}" alt="${game.Title}" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>${game.Title}</h3>
+                        </div>
+                    </a>
+                `;
+                carouselInner.appendChild(item);
+            });
+        }
+    })
+    .catch(error => console.error('Failed to load games:', error));
+});
+
+// Fetch and display featured games carousel on page load
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('/games/getGames?limit=8')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(games => {
+        console.log('Featured Games loaded');
+        if (games && games.length) {
+            const carouselIndicators = document.querySelector('#featuredGamesCarousel .carousel-indicators');
+            const carouselInner = document.querySelector('#featuredGamesCarousel .carousel-inner');
+            let itemsHtml = '';
+            let indicatorsHtml = '';
+            let itemActiveClass = 'active';
+
+            // Group games into slides
+            for (let i = 0; i < games.length; i += 4) {
+                let rowContent = '';
+                for (let j = i; j < i + 4 && j < games.length; j++) {
+                    rowContent += `
+                        <div class="col-12 col-md-3 mb-3 pt-2 pb-4">
+                            <a href="./Details.html?gameId=${games[j].Game_ID}">
+                                <div class="card">
+                                    <img src="images/Games/${games[j].ImagePath}" class="card-img-top" alt="${games[j].Title}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${games[j].Title}</h5>
+                                        <p class="card-text">${truncateDescription(games[j].Description, 80)}</p>
+                                        <p class="price">$${games[j].Price}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    `;
+                }
+
+                // Add the row to the carousel item
+                itemsHtml += `
+                    <div class="carousel-item ${itemActiveClass}">
+                        <div class="row">${rowContent}</div>
+                    </div>
+                `;
+
+                // Add indicator
+                indicatorsHtml += `
+                    <button type="button" data-bs-target="#featuredGamesCarousel" data-bs-slide-to="${i / 4}" class="${itemActiveClass}" aria-current="true" aria-label="Slide ${i / 4 + 1}"></button>
+                `;
+
+                itemActiveClass = ''; // Only the first item should be active
+            }
+
+            carouselInner.innerHTML = itemsHtml;
+            carouselIndicators.innerHTML = indicatorsHtml;
+
+            // Initialize or refresh the carousel using Bootstrap's JavaScript
+            var carouselElement = document.querySelector('#featuredGamesCarousel');
+            var carouselInstance = new bootstrap.Carousel(carouselElement, {
+                interval: 5000,
+                wrap: true
+            });
+        }
+    })
+    .catch(error => console.error('Error loading games:', error));
+});
+
+// Function to truncate long descriptions
+function truncateDescription(description, maxChars) {
+    if (description.length > maxChars) {
+        return description.substring(0, maxChars) + "...";
+    }
+    return description;
+}
+
+// Fetch and display all games for browsing on page load
+document.addEventListener('DOMContentLoaded', function() {
+    var storedUsername = sessionStorage.getItem('username');
+    var userID = sessionStorage.getItem('userID');
+    console.log(storedUsername);
+    console.log(userID);
+    fetch('/games/getGames?limit=8')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(games => {
+        const container = document.getElementById('BrowseAllGames');
+        games.forEach(game => {
+            const gameCol = document.createElement('div');
+            gameCol.className = 'col-md-3 mb-4';
+            gameCol.innerHTML = `
+                <div class="bg-light border">
+                    <a href="./Details.html?gameId=${game.Game_ID}">
+                        <img src="images/Games/${game.ImagePath}" alt="${game.Title}" class="img-fluid">
+                    </a>
+                </div>
+            `;
+            container.appendChild(gameCol);
+        });
+    })
+    .catch(error => console.error('Error loading games:', error));
+});
+
+
+loginValidation.js
+// Add an event listener to the window load event
+window.addEventListener('load', function() {
+    const form = document.getElementById('loginForm');
+    var storedUsername = sessionStorage.getItem('username');
+
+    // Redirect to the homepage if the user is already logged in
+    if (storedUsername) {
+        window.location.href = './';
+    }
+    
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent the default form submission behavior
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const usernameError = document.getElementById('usernameError');
+            const passwordError = document.getElementById('passwordError');
+
+            // Clear previous errors
+            usernameError.textContent = '';
+            passwordError.textContent = '';
+
+            if (username && password) {
+                console.log('Validation passed, attempting login...');
+                // Validate credentials
+                AccValidation(username, password).then(isValid => {
+                    if (isValid) {
+                        // Store username in session storage and redirect to homepage
+                        sessionStorage.setItem('username', username);
+                        console.log('Redirecting...');
+                        fetchAndStoreUserID();
+                        window.location.href = './';
+                    } else {
+                        // Display error if credentials are invalid
+                        console.error('Login failed: Invalid credentials.');
+                        passwordError.textContent = 'Invalid username or password.';
+                    }
+                }).catch(err => {
+                    // Display server error
+                    console.error('Login error:', err);
+                    passwordError.textContent = 'Server error. Try again later.';
+                });
+            } else {
+                // Display error messages for missing fields
+                if (!username) {
+                    usernameError.textContent = 'Username is required.';
+                }
+                if (!password) {
+                    passwordError.textContent = 'Password is required.';
+                }
+            }
+        });
+    } else {
+        console.error("Form not found");
+    }
+});
+
+// Function to validate account credentials
+function AccValidation(username, password) {
+    return fetch('/users/loginUser', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+    })
+    .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+    })
+    .then(data => data.isValid) // Return whether the credentials are valid
+    .catch(error => {
+        console.error('Fetch error:', error);
+        throw error;
+    });
+}
+
+// Function to fetch user ID and store it in session storage
+function fetchAndStoreUserID() {
+    const username = sessionStorage.getItem('username');
+    console.log(username);
+    if (!username) {
+        console.log("Username not stored in session");
+        return;
+    }
+
+    fetch(`/users/SaveUserID?username=${encodeURIComponent(username)}`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to fetch user ID');
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data && data.User_ID) {
+            sessionStorage.setItem('userID', data.User_ID); // Store user ID in sessionStorage
+        } else {
+            console.error('User ID not found in response');
+        }
+    })
+    .catch(error => console.error('Failed to fetch user ID:', error));
+}
+
+
+navbar.js
+$(function() {
+    // Load the navbar from an external HTML file
+    $("#navbar-placeholder").load("navbar.html", function() {
+        console.log("Navbar loaded successfully.");
+
+        // Once the navbar is loaded, setup the search functionality
+        const searchForm = document.getElementById('searchForm');
+        const searchInput = document.getElementById('searchInput');
+        
+        if (searchForm) {
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting traditionally
+                const searchTerm = searchInput.value.trim();
+
+                if (searchTerm) {
+                    console.log('Search for:', searchTerm);
+                    // Redirect to a search results page with the search term as a query parameter
+                    window.location.href = `./BrowseGame.html?search=${encodeURIComponent(searchTerm)}`;
+                } else {
+                    window.location.href = `./BrowseGame.html`; // Redirect to browse page if no search term is provided
+                }
+            });
+        }
+
+        // Once the navbar is loaded, update the navbar content
+        updateNavbar();
+    });
+});
+
+// Function to update the navbar based on the user's login status
+function updateNavbar() {
+    // Check if the user is logged in
+    const storedUsername = sessionStorage.getItem('username');
+    const currentPage = window.location.pathname.split('/').pop(); // Get the current page name
+    
+    if (storedUsername) {
+        // Change the navbar to show the user's name and a logout option
+        $('#userControl').html(`
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="position: relative;">
+                ${storedUsername}
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="./Profile.html">Profile</a></li>
+                <li><a class="dropdown-item" href="./settings.html">Settings</a></li>
+                <li><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        `);
+    } else {
+        // Show a login button if not logged in
+        $('#userControl').html('<a class="nav-link" href="./Login.html">Login</a>');
+
+        // Redirect to login page if the current page is Profile.html and the user is not logged in
+        if (currentPage === 'Profile.html') {
+            window.location.href = './Login.html';
+        }
+    }
+}
+
+// Function to log the user out
+function logout() {
+    sessionStorage.removeItem('username'); // Remove username from session storage
+    sessionStorage.removeItem('userID'); // Remove user ID from session storage
+    location.reload(); // Reload the page to update the navbar
+}
+
+
+registrationValidation.js
+// Wait until the DOM is fully loaded before running the script
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('registrationForm');
+
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();  // Always prevent default form submission
+
+            // Retrieve input values and trim whitespace
+            const username = document.getElementById('username').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const confirmPassword = document.getElementById('confirm-password').value.trim();
+
+            // Retrieve error display elements
+            const usernameError = document.getElementById('usernameError');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            const confirmPasswordError = document.getElementById('confirmPasswordError');
+
+            // Clear previous error messages
+            usernameError.textContent = '';
+            emailError.textContent = '';
+            passwordError.textContent = '';
+            confirmPasswordError.textContent = '';
+
+            let error = false; // Flag to track validation errors
+
+            // Validate username
+            if (!username) {
+                usernameError.textContent = 'Username is required.';
+                error = true;
+            }
+
+            // Validate email
+            if (!email) {
+                emailError.textContent = 'Email is required.';
+                error = true;
+            } else if (!validateEmail(email)) {
+                emailError.textContent = 'Please enter a valid email address.';
+                error = true;
+            }
+
+            // Validate password
+            if (!password) {
+                passwordError.textContent = 'Password is required.';
+                error = true;
+            }
+
+            // Validate confirm password
+            if (!confirmPassword) {
+                confirmPasswordError.textContent = 'Please re-enter password';
+                error = true;
+            }
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                confirmPasswordError.textContent = 'Passwords do not match.';
+                error = true;
+            }
+
+            // If no validation errors, proceed to submit the form
+            if (!error) {
+                console.log('All validations passed, ready to submit form.');
+                
+                // Prepare data for sending
+                const formData = {
+                    username: username,
+                    password: password,
+                    email: email
+                };
+                
+                console.log("Sending data:", formData);
+
+                // Send data to the server using Fetch API
+                fetch('/users/registerUser', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => {
+                    console.log(response);
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Success:', data);
+                    alert('Registration successful! Go to Login now');
+                    window.location.href = './Login.html';  // Redirect after successful registration
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error submitting form.');
+                });
+            }
+        });
+    }
+});
+
+// Function to validate the email format using a regular expression
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email.toLowerCase());
+}
+
+
+settings.js
+// Add click event listeners to each item in the list group
+document.querySelectorAll('.list-group-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Remove 'active' class from all list group items
+        document.querySelectorAll('.list-group-item').forEach(item => item.classList.remove('active'));
+        // Hide all tab content
+        document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
+        
+        // Display the selected tab content
+        const selectedContentId = this.getAttribute('aria-controls');
+        document.getElementById(selectedContentId).style.display = 'block';
+        // Add 'active' class to the clicked list group item
+        this.classList.add('active');
+    });
+});
+
+// Wait until the DOM is fully loaded before running the script
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch and display all games
+    fetch('/games/getAllGames')
+    .then(response => response.json())
+    .then(games => {
+        const container = document.getElementById('gamesContainer');
+        container.innerHTML = ''; // Clear existing content
+
+        // Create HTML for each game and add it to the container
+        games.forEach(game => {
+            const gameCardHTML = `
+                <div class="col-3 pt-3">
+                    <div class="card">
+                        <img src="images/Games/${game.ImagePath}" class="card-img-top" alt="${game.Title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${game.Title}</h5>
+                            <p class="card-text">Price: $${game.Price.toFixed(2)}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.innerHTML += gameCardHTML;
+        });
+    })
+    .catch(error => {
+        console.error('Failed to fetch games:', error);
+    });
+
+    var storedUserID = sessionStorage.getItem('userID');
+
+    // Fetch and display transaction history for the logged-in user
+    fetch('/transactions/getTransactions?userID=' + storedUserID)
+    .then(response => response.json())
+    .then(transactions => {
+        console.log('Transactions found');
+        const tbody = document.querySelector('#paymentHistory tbody');
+        tbody.innerHTML = ''; // Clear existing rows
+        // Create HTML for each transaction and add it to the table body
+        transactions.forEach((transaction, index) => {
+            const row = `
+                <tr>
+                    <th scope="row">${index + 1}</th>
+                    <td>${new Date(transaction.Purchase_Date).toLocaleDateString()}</td>
+                    <td>$${transaction.Amount.toFixed(2)}</td>
+                    <td>${transaction.GameName}</td>
+                    <td>${transaction.Payment_Method}</td>
+                </tr>
+            `;
+            tbody.innerHTML += row;
+        });
+    })
+    .catch(error => {
+        console.error('Error loading transactions:', error);
+    });
+});
+
+// Function to handle game submission
+function submitGame() {
+    const gameName = document.getElementById('gameName').value;
+    const gamePrice = document.getElementById('gamePrice').value;
+    const gameDescription = document.getElementById('gameDescription').value;
+    const gameFile = document.getElementById('gameFile').files[0];
+
+    // Validate that all fields are filled in
+    if (!gameName || !gameFile || !gamePrice || !gameDescription) {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('name', gameName);
+    formData.append('price', gamePrice);
+    formData.append('description', gameDescription);
+    formData.append('file', gameFile);
+
+    // Submit the game data to the server
+    fetch('/games/uploadGame', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Success:', data);
+        alert('Game uploaded successfully!');
+        var myModal = bootstrap.Modal.getInstance(document.getElementById('uploadGameModal'));
+        myModal.hide(); // Hide the modal using Bootstrap 5 instance method
+        location.reload(); // Reload the page to update the game list
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error uploading game.');
+    });
+}
+
+

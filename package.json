@@ -1,0 +1,19 @@
+{
+  "name": "indiegamehub",
+  "version": "1.0.0",
+  "description": "Indie game hub",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Chee Yu Koh",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "sqlite3": "^5.1.7"
+  }
+}

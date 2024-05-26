@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="Author" content="Chee Yu Koh">
+        <meta name="Description" content="This is task 3.12P">
+        <meta charset="utf-8">
+        <title>Indie Game Hub</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./Js/editProfile.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <!-- Navigation bar -->
+            <div id="navbar-placeholder"></div>
+
+        </header>
+
+        <main>
+            <div class="container mt-5 mb-5">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center mb-4">
+                            <img src="https://via.placeholder.com/200" class="rounded-circle" alt="Profile Image" id="profileImage" style="cursor: pointer;">
+                            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                            <div class="mt-5">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>Bios</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <p id="bioText">Text about the user goes here. This could include the user's bio, interests, or any other relevant information.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4>Profile</h4>
+                                    <button class="btn btn-primary" id="editProfileButton" onclick="toggleEditMode()">Edit</button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5>Personal Details</h5>
+                                <p><strong>Username:</strong> <span id="usernameDisplay">abcdefg</span></p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p><strong>Password:</strong> <span id="passwordDisplay" data-password="actualPassword">********</span></p>
+                                    <button class="btn btn-secondary" onclick="togglePasswordVisibility()">Show</button>
+                                </div>
+                                <p><strong>First Name:</strong> <span id="firstNameDisplay">aaaaaaaaa</span></p>
+                                <p><strong>Last Name:</strong> <span id="lastNameDisplay">aaaaaaaaa</span></p>
+                        
+                                <hr> <!-- Divider line between sections -->
+                                
+                                <h5 class="mt-4">Billing Details</h5>
+                                <p><strong>Billing Address:</strong> <span id="billingAddressDisplay">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span></p>
+                                <p><strong>City:</strong> <span id="cityDisplay">aaaaaaaaa</span></p>
+                                <p><strong>Postal Code:</strong> <span id="postalCodeDisplay">1234</span></p>
+                                <p><strong>State:</strong> <span id="stateDisplay">VIC</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+        <footer class="text-white bg-dark text-center  pt-3 pb-3">
+            <p>© 2024 Created by Chee Yu Koh </p>
+        </footer>
+        <script src="./Js/navbar.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>
